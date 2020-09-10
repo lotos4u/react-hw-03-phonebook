@@ -1,0 +1,20 @@
+.formContainer {
+  border: 1px #000000 solid;
+  padding: 20px;
+  width: 400px;
+  height: fit-content;
+
+  label {
+    display: block;
+    margin: 0 0 30px 0;
+
+    input {
+      display: block;
+    }
+  }
+
+  button {
+    display: block;
+    padding: 5px 10px;
+  }
+}
