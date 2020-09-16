@@ -23,7 +23,7 @@ class FilterForm extends Component {
                     Filter contacts by name
                     <input type='text'
                            value={this.state.filter}
-                           onChange={(e) => this.handleChangeFilter(e)}/>
+                           onChange={this.handleChangeFilter}/>
                 </label>
             </div>
         );
