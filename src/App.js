@@ -49,7 +49,7 @@ class App extends Component {
         return this.state.contacts.filter(c => c.name.toLowerCase().includes(this.state.filter.toLowerCase()));
     }
 
-    handleFilter(filter) {
+    handleFilter = (filter) => {
         this.setState({
             filter: filter,
         });
@@ -60,8 +60,8 @@ class App extends Component {
             <h1>Phonebook</h1>
             <ContactForm onAdd={this.handleSubmit}/>
             <h1>Contacts</h1>
-            <FilterForm onFilter={(f) => this.handleFilter(f)}/>
-            <ContactsList onDelete={(id) => this.handleDelete(id)}
+            <FilterForm onFilter={this.handleFilter}/>
+            <ContactsList onDelete={this.handleDelete}
                           contacts={this.getFilteredContacts()}/>
         </>;
     }

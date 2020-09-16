@@ -36,18 +36,19 @@ class ContactForm extends Component {
     }
 
     render() {
+        const {name, number} = this.state;
         return (
             <div className={styles.formContainer}>
                 <label>
                     Name
-                    <input type='text' value={this.state.name} onChange={(e) => this.handleChangeName(e)}/>
+                    <input type='text' value={name} onChange={this.handleChangeName}/>
                 </label>
                 <label>
                     Number
-                    <input type='text' value={this.state.number} onChange={(e) => this.handleChangeNumber(e)}/>
+                    <input type='text' value={number} onChange={this.handleChangeNumber}/>
                 </label>
-                <button disabled={!this.state.name || !this.state.number}
-                        onClick={(e) => this.handleSubmit(e)}>Add contact
+                <button disabled={!name || !number}
+                        onClick={this.handleSubmit}>Add contact
                 </button>
             </div>
         );
